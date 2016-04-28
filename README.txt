@@ -1,7 +1,7 @@
 # Panasonic Grid-Eye on Teensy 3.2
 Softwares: Arduino & Processing.
 
-# Schema.
+# Scheme.
 See the .jpeg
 
 # Arduino IDE & Teensyduino.
@@ -10,8 +10,8 @@ Arduino official site: https://www.arduino.cc/
 2. Download Teensyduino. 
 Teensyduino: https://www.pjrc.com/teensy/td_download.html
 3. Load the sketch grid-eye.ino in Arduino. 
-4. Follow the schema, and connect your Teensy to your computer. Verify that Arduino IDE recognizes it ('Tools').
-5. Implement the sketch.
+4. Follow the scheme, and connect your Teensy to your computer. Verify that Arduino IDE recognizes it (Menubar>'Tools').
+5. Implement the code.
 6. Data can be shown with Arduino serial monitoring.
 
 # Processing.
