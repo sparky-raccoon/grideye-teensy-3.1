@@ -8,6 +8,7 @@ Serial myPort;
 int i,j;
 float [] data = new float[64];
 int flag=0;
+boolean not500=true;
 
 void setup()
 {
@@ -27,7 +28,7 @@ void setup()
   temp = myPort.readStringUntil(lf);
   temp = null;
   i=7;
-  j=0;
+  j=7; // j=0;
 }
 
 void draw()
@@ -48,13 +49,17 @@ void get_data(float val) {
   do {
     data[indice] = val;
     if (indice==63) {
-      change_color();
+      if ((data[1]==500)&&(data[1]==data[2])) { not500=false; }
+      if (not500==true) {
+        change_color();
+      }
       println("END");
       println();
       indice=0;
       i=7;
-      j=0;
+      j=7; // j=0
       flag=0;
+      not500=true;
     }
     indice++;
   } while (flag == 1);
@@ -73,7 +78,7 @@ void change_color() {
     display_data(data[t],i,j+1);
     i--;
     if ((t==7)||(t==15)||(t==23)||(t==31)||(t==39)||(t==47)||(t==55)||(t==63)) {
-      j++;
+      j--; //j++
       i=7;
     }
   }
@@ -92,7 +97,10 @@ void choose_color(float vdata) {
           if ((vdata>=22)&&(vdata<25.5)) fill(255,255,0); 
           else {
             if ((vdata>=25.5)&&(vdata<=31)) fill(255,155,0);
-            else fill(255,0,0);
+            else {
+              if ((vdata>31)&&(vdata!=500)) fill(255,0,0);
+              else fill(255,255,255);
+            }
           }
         }
       }
