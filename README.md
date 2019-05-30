@@ -20,7 +20,7 @@ Now, you are able to show data through Arduino serial monitoring. It will probab
 As the data is quite difficult to interpret on its own (64 values updating too quickly to understand what's happening), I decided to create a minimalist GUI with Processing.
 The GUI intends to display the data as a heat matrix.
 
-1. Download Processing v2.0 from the [official site] (https://processing.org/).
+1. Download Processing v2.0 from the [official site](https://processing.org/).
 2. Connect Arduino IDE and Processing. Then, follow the steps described [here](http://playground.arduino.cc/Interfacing/Processing).
 3. Load the [gui.pde sketch](./gui/gui.pde) in Processing.
 4. You are all set ! Run the sketch and enjoy. 🎉
